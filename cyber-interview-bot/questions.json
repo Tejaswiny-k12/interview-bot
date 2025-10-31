@@ -1,0 +1,65 @@
+[
+  {
+    "id": "t1",
+    "difficulty": "Basic",
+    "type": "technical",
+    "question": "What is the difference between symmetric and asymmetric encryption? Give an example use-case for each.",
+    "keywords": ["symmetric", "asymmetric", "shared key", "public key", "private key", "use-case"],
+    "explanation": "Symmetric encryption uses a single shared secret key for encryption and decryption (fast, good for bulk data). Asymmetric uses a public/private key pair (slower, supports key exchange and digital signatures). Example: TLS uses asymmetric keys for handshake and symmetric for session encryption.",
+    "references": ["Cryptography and Network Security (textbook)", "TLS/SSL concepts"]
+  },
+  {
+    "id": "b1",
+    "difficulty": "Basic",
+    "type": "behavioral",
+    "question": "Tell me about a time you faced a security incident. What was the situation, what actions did you take, and what was the result?",
+    "keywords": [],
+    "explanation": "Use STAR: Situation, Task, Action, Result. Focus on your role, the technical steps taken, and measurable outcomes.",
+    "references": ["STAR interview technique"]
+  },
+  {
+    "id": "s1",
+    "difficulty": "Intermediate",
+    "type": "scenario",
+    "question": "You discover unusual outbound traffic from a critical server late at night. Describe the steps you would take to investigate and contain the issue.",
+    "keywords": ["containment", "logs", "isolation", "forensics", "block", "egress"],
+    "explanation": "Start by isolating the system to prevent exfiltration, collect volatile logs, preserve evidence, identify the process/connection, block attacker C2 channels, and scan other hosts for indicators.",
+    "references": ["Incident Response playbooks", "SANS incident handling"]
+  },
+  {
+    "id": "t2",
+    "difficulty": "Intermediate",
+    "type": "technical",
+    "question": "Explain what a SQL injection attack is and how to prevent it.",
+    "keywords": ["sql injection", "parameterized queries", "input validation", "prepared statements", "escaping"],
+    "explanation": "SQL injection occurs when attacker-controlled input is used to modify SQL queries. Prevent with parameterized queries/prepared statements, input validation, least privilege, and ORM safe APIs.",
+    "references": ["OWASP Top 10", "Parameterized queries guide"]
+  },
+  {
+    "id": "t3",
+    "difficulty": "Advanced",
+    "type": "technical",
+    "question": "Describe how a TLS handshake works, including the role of certificates and how perfect forward secrecy is achieved.",
+    "keywords": ["handshake", "certificate", "public key", "private key", "key exchange", "ephemeral", "ECDHE", "PFS"],
+    "explanation": "TLS handshake authenticates endpoints with certificates and negotiates keys. Perfect forward secrecy is achieved by using ephemeral key exchange algorithms (e.g., ECDHE) so session keys can't be derived from long-term private keys.",
+    "references": ["TLS handshake overview", "Forward Secrecy concepts"]
+  },
+  {
+    "id": "b2",
+    "difficulty": "Intermediate",
+    "type": "behavioral",
+    "question": "Describe a time you had to convince stakeholders to invest in security improvements. How did you approach it and what was the outcome?",
+    "keywords": [],
+    "explanation": "Describe the business case you built, how you quantified risk or ROI, and the final outcome. Use numbers if possible.",
+    "references": ["Risk communication", "Security business case templates"]
+  },
+  {
+    "id": "s2",
+    "difficulty": "Advanced",
+    "type": "scenario",
+    "question": "An attacker is performing lateral movement in your network. Which telemetry sources would you prioritize to detect and stop them, and why?",
+    "keywords": ["endpoint logs", "auth logs", "network flow", "dns logs", "siem", "detections"],
+    "explanation": "Prioritize endpoint telemetry (process creation, suspicious service installs), auth logs for unusual logins, network flow and DNS for C2 patterns, and correlate in SIEM for detection and response.",
+    "references": ["Endpoint detection and response (EDR)", "Threat hunting telemetry"]
+  }
+]

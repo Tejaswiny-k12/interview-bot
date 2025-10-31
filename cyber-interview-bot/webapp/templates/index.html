@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cybersecurity Interview Coach</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Session Controls</h5>
+              <div class="mb-2">
+                <label for="difficulty" class="form-label">Difficulty</label>
+                <select id="difficulty" class="form-select">
+                  <option>Basic</option>
+                  <option selected>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+              <div class="mb-2">
+                <label for="qtype" class="form-label">Question Type</label>
+                <select id="qtype" class="form-select">
+                  <option value="">Mixed</option>
+                  <option value="technical">Technical</option>
+                  <option value="scenario">Scenario</option>
+                  <option value="behavioral">Behavioral</option>
+                </select>
+              </div>
+              <button id="nextQ" class="btn btn-primary w-100">Get Question</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h6>Tips</h6>
+              <ul id="tipsList" class="small"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card chat-card">
+            <div class="card-header">Interview Practice</div>
+            <div class="card-body d-flex flex-column" style="height: 60vh;">
+              <div id="chat" class="flex-grow-1 overflow-auto mb-3"></div>
+
+              <div id="answerArea">
+                <textarea id="answerInput" class="form-control mb-2" rows="4" placeholder="Type your answer here (end when done)..."></textarea>
+                <div class="d-flex gap-2">
+                  <button id="submitAns" class="btn btn-success">Submit Answer</button>
+                  <button id="explainBtn" class="btn btn-outline-secondary">Explain</button>
+                  <button id="skipBtn" class="btn btn-outline-danger">Skip</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

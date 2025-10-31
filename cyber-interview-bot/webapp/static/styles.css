@@ -1,0 +1,6 @@
+body{background:#f8fafc}
+.chat-card .card-body{display:flex;flex-direction:column}
+#chat{padding:10px;background:#fff;border:1px solid #e9ecef;border-radius:6px}
+.bot-msg{background:linear-gradient(90deg,#eef2ff,#ffffff);padding:10px;border-radius:8px;max-width:85%}
+.user-msg{background:#e8f7ef;padding:10px;border-radius:8px;max-width:85%;margin-left:auto}
+pre{white-space:pre-wrap}
