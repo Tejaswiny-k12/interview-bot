@@ -35,7 +35,7 @@ python -m venv .venv
 
 ```powershell
 cd cyber-interview-bot
-.\.venv\Scripts\python.exe webapp\app.py
+.\.venv\Scripts\python.exe -m webapp\app.py
 # or if venv is active: python webapp\app.py
 ```
 
